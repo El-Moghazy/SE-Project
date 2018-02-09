@@ -12,16 +12,25 @@
 # <h2 align="center">  Sprint 0  </h2>
 
 ## About:
-
-Full Name                                                  |  ID
-:---------------------------------------------------------:|:-------------------------:
-[AbdElRhman ElMoghazy](https://github.com/MoghazyCoder)                   |  37-19058
-[Name](https://github.com/YourUserName)                   |  Replace this with id
-[Name](https://github.com/YourUserName)                   |  Replace this with id
-[Name](https://github.com/YourUserName)                   |  Replace this with id
-[Name](https://github.com/YourUserName)                   |  Replace this with id
+| [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | 
+| :---: | :---: | :---: | :---: | :---: | 
+| [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove |  
+| [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | 
+| [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="150px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | 
 
 
 ### Purpose: 
 
 
+---
+<!-- TODO: Each component group make new branch and the members write their names here -->
+
+<h1 align="center">  Component Task  </h1>
+
+Full Name                                                  |  ID
+:---------------------------------------------------------:|:-------------------------:
+[Name](https://github.com/YourUserName)                   |  Replace this with id
+[Name](https://github.com/YourUserName)                   |  Replace this with id
+[Name](https://github.com/YourUserName)                   |  Replace this with id
+[Name](https://github.com/YourUserName)                   |  Replace this with id
+[Name](https://github.com/YourUserName)                   |  Replace this with id
