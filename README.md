@@ -2,7 +2,10 @@
 
 <!-- This is a comment, it will not be included) -->
 <!-- Template Logo ToBeEdited) -->
-![](GeeKee.jpg) 
+
+<p align="center">
+  <img src ="GeeKee.jpg" />
+</p>
 
 ---
 
