@@ -1,8 +1,8 @@
 <h1 align="center">  T20  </h1>
 
-[comment]: <> (This is a comment, it will not be included)
-[comment]: <> (Template Logo ToBeEdited)
-![](GeeKee.png) 
+<!-- This is a comment, it will not be included) -->
+<!-- Template Logo ToBeEdited) -->
+![](GeeKee.jpg) 
 
 ---
 
