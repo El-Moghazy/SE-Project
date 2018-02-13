@@ -31,7 +31,7 @@
 
 Full Name                                                  |  ID
 :---------------------------------------------------------:|:-------------------------:
-[Name](https://github.com/MoghazyCoder)                   |  37-19058
+[AbdElRhman ElMoghazy](https://github.com/MoghazyCoder)                   |  37-19058
 [Name](https://github.com/YourUserName)                   |  Replace this with id
 [Name](https://github.com/YourUserName)                   |  Replace this with id
 [Name](https://github.com/YourUserName)                   |  Replace this with id
