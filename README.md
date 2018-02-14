@@ -31,7 +31,7 @@
 
 Full Name                                                  |  ID
 :---------------------------------------------------------:|:-------------------------:
-[Name](https://github.com/abdullahkady)                   |  37-16401
+[Abdullah Kady](https://github.com/abdullahkady)                   |  37-16401
 [Name](https://github.com/YourUserName)                   |  Replace this with id
 [Name](https://github.com/YourUserName)                   |  Replace this with id
 [Name](https://github.com/YourUserName)                   |  Replace this with id
