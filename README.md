@@ -21,17 +21,7 @@
 | [<img src="pics/Marina.JPG" width="120px;" height="120px;"/><br /><sub><b>Marina Makram</b></sub>](https://github.com/marinakamel)<br /> ReplaceItWithThingsYouLove | [<img src="pics/Ahmed El Bedwehy.jpg" width="120px;" height="120px;"/><br /><sub><b>Ahmed El Bedwehy</b></sub>](https://github.com/Ahmedelbedwehy)<br /> Cars & Tennis | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="120px;" height="120px;"/><br /><sub><b>Sohail Khattab</b></sub>](https://github.com/sohailkhattab)<br /> Batman |
 | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="120px;" height="120px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="120px;" height="120px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove | [<img src="pics/ReplaceItWithYourPicOrAvatar.png" width="120px;" height="120px;"/><br /><sub><b>ReplaceItWithYourName</b></sub>](https://github.com/ReplaceThisWithYourGitHubUserName)<br /> ReplaceItWithThingsYouLove |
 
-### Purpose:
+## Purpose:
+<em>Gathering the whole Tutorial **20 person** into One Repository for future work<em>
 
-
----sm
 <!-- TODO: Each component group make new branch and the members write their names here -->
-
-<h1 align="center">  Component Task  </h1>
-
-Full Name                                                  |  ID
-:---------------------------------------------------------:|:-------------------------:
-[Name](https://github.com/YourUserName)                   |  Replace this with id
-[Name](https://github.com/YourUserName)                   |  Replace this with id
-[Name](https://github.com/YourUserName)                   |  Replace this with id
-[Name](https://github.com/YourUserName)                   |  Replace this with id
