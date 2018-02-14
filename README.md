@@ -34,4 +34,4 @@ Full Name                                                  |  ID
 [Abdullah Kady](https://github.com/abdullahkady)                   |  37-16401
 [Hazem Hisham](https://github.com/HazemKadeeky)                    |  37-2999
 [Mohamed El-Far](https://github.com/mohamedfar97)                   |  37-4781
-[Name](https://github.com/YourUserName)                   |  Replace this with id
+[Salma Medhat](https://github.com/salmamedhat)                   |  37-3202
