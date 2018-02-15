@@ -4,7 +4,7 @@
 <!-- Template Logo ToBeEdited) -->
 
 <p align="center">
-  <img src ="GeeKee.jpg" />
+  <img src ="pics/OurLogo.png" />
 </p>
 
 ---
