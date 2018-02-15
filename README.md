@@ -33,5 +33,5 @@ Full Name                                                  |  ID
 :---------------------------------------------------------:|:-------------------------:
 [Amr M. Kayid](https://github.com/AmrMKayid)               |  37-15594
 [Abdullah Emad](https://github.com/abdullahemad12)         |  37-2409
-[Mayar Alfares](https://github.com/mayarAlfres)            |  37-2915
+[Mayar Alfares](https://github.com/MayarAlfres)            |  37-2915
 [Name](https://github.com/YourUserName)                    |  Replace this with id
