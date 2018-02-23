@@ -1,0 +1,82 @@
+/**
+ * @license
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ */
+
+@mixin nb-b-input-group-theme() {
+
+  .input-group-addon,
+  .input-group-icon {
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: nb-theme(form-control-placeholder-color);
+  }
+
+  .input-group-addon {
+    &.primary {
+      color: nb-theme(color-primary);
+    }
+
+    &.success {
+      color: nb-theme(color-success);
+    }
+
+    &.warning {
+      color: nb-theme(color-warning);
+    }
+
+    &.info {
+      color: nb-theme(color-info);
+    }
+
+    &.danger {
+      color: nb-theme(color-danger);
+    }
+
+    &.secondary {
+      color: nb-theme(color-secondary);
+    }
+  }
+
+  .input-group-icon + .form-control {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .input-group-sm > .form-control {
+    font-size: nb-theme(form-control-sm-font-size);
+    padding: nb-theme(form-control-sm-padding);
+    @include install-placeholder(nb-theme(form-control-placeholder-color),
+      nb-theme(form-control-sm-font-size));
+  }
+
+  .input-group-lg > .form-control {
+    font-size: nb-theme(form-control-lg-font-size);
+    padding: nb-theme(form-control-lg-padding);
+    @include install-placeholder(nb-theme(form-control-placeholder-color),
+      nb-theme(form-control-lg-font-size));
+  }
+
+  .input-group-rounded > .form-control {
+    border-radius: 1.5rem;
+  }
+
+  .input-group-border-only > .form-control {
+    background: transparent;
+  }
+
+  .input-group-fill-only > .form-control {
+    border-color: transparent;
+  }
+
+  .input-group-btn:not(:last-child) > .btn,
+  .input-group-btn:not(:last-child) > .btn-group,
+  .input-group-btn:not(:first-child) > .btn,
+  .input-group-btn:not(:first-child) > .btn-group {
+    margin: 0;
+  }
+}

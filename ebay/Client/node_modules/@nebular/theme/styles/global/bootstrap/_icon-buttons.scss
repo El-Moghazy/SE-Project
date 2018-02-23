@@ -1,0 +1,30 @@
+/**
+ * @license
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ */
+
+@mixin nb-b-icon-buttons-theme() {
+
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    padding: 0.5rem 1rem;
+
+    &:focus,
+    &.focus {
+      box-shadow: none;
+    }
+  }
+
+  .btn-with-icon {
+    text-align: left;
+    padding-left: 1rem;
+
+    .icon {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+export declare function isEmpty(value: any[] | string): boolean;
+export declare function trim(value: string): string;
+export declare function has(value: any, prop: string): boolean;
+export declare function isFunction(value: any): boolean;
+export declare function get(value: any, path: string, defaultValue?: any): any;
+export declare function omit(value: any, propToSkip: string): any;
+export declare function size(value: any[]): number;
+export declare function once(fn: Once): Once;
+export declare function defaultsDeep(target: any, ...sources: any[]): any;
+export declare function includes(target: string | any[], value: any): boolean;
+export declare function isNil(value: any): boolean;
+export declare type Once = (...args: any[]) => any;

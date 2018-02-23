@@ -1,0 +1,52 @@
+{
+  "name": "angular-seed-project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:prod": "npm run build --prod --aot",
+    "lint": "ng lint --type-check",
+    "lint:fix": "ng lint --fix"
+  },
+  "dependencies": {
+    "@angular/animations": "^5.2.0",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "@nebular/theme": "^2.0.0-rc.5",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0",
+    "angular2-toaster": "^4.0.1",
+    "bootstrap": "4.0.0-beta.2",
+    "classlist.js": "^1.1.20150312",
+    "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
+    "intl": "^1.2.5",
+    "ionicons": "^3.0.0",
+    "jwt-decode": "^2.2.0",
+    "moment": "^2.20.1",
+    "nebular-icons": "^1.0.6",
+    "ng2-smart-table": "^1.2.2",
+    "ng2-tree": "^2.0.0-rc.6",
+    "normalize.css": "^7.0.0",
+    "pace-js": "^1.0.2",
+    "roboto-fontface": "0.8.0",
+    "rxjs": "^5.5.6",
+    "sweetalert2": "^7.12.0",
+    "typeface-exo": "^0.0.44",
+    "web-animations-js": "^2.3.1",
+    "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.6.8",
+    "@angular/compiler-cli": "^5.2.0",
+    "@angular/language-service": "^5.2.0",
+    "typescript": "~2.5.3"
+  }
+}
