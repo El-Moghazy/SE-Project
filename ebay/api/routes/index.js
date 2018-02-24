@@ -1,6 +1,6 @@
 var express = require('express'),
-  router = express.Router(),
-  productCtrl = require('../controllers/ProductController');
+    router = express.Router(),
+    productCtrl = require('../controllers/ProductController');
 
 //-------------------------------Product Routes-----------------------------------
 router.get('/product/getProducts', productCtrl.getProducts);

@@ -5,8 +5,8 @@
  */
 
 var app = require('../app'),
-  debug = require('debug')('nodejs-seed-project-es5:server'),
-  http = require('http');
+    debug = require('debug')('ebay:server'),
+    http = require('http');
 
 /**
  * Normalize a port into a number, string, or false.

@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var productSchema = mongoose.Schema({
+  // TODO: Modify Schema
   name: {
     type: String,
     required: true,
@@ -16,7 +17,13 @@ var productSchema = mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  updatedAt: Date
+  updatedAt: {
+    type: Date
+  },
+  sellerName: {
+    type: String,
+    required: true
+  }
 });
 
 mongoose.model('Product', productSchema);

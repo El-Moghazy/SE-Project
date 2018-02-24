@@ -23,4 +23,6 @@ export class StatusCardComponent {
   @Input() title: string;
   @Input() type: string;
   @Input() on = true;
+
+  // TODO: Assign Users info to status card
 }

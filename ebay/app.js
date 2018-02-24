@@ -1,13 +1,15 @@
 require('./api/config/DBConnection');
 var express = require('express'),
-  logger = require('morgan'),
-  cors = require('cors'),
-  helmet = require('helmet'),
-  compression = require('compression'),
-  bodyParser = require('body-parser'),
-  routes = require('./api/routes'),
-  config = require('./api/config/Config'),
-  app = express();
+    logger = require('morgan'),
+    cors = require('cors'), // To link Angular port with Node port
+    helmet = require('helmet'),
+    compression = require('compression'),
+    bodyParser = require('body-parser'),
+    routes = require('./api/routes/index'),
+    config = require('./api/config/Config'),
+
+// Initialize app with express
+app = express();
 
 app.set('secret', config.SECRET);
 
@@ -28,6 +30,7 @@ app.use(
   })
 );
 app.use('/api', routes);
+
 
 // 500 internal server error handler
 app.use(function(err, req, res, next) {

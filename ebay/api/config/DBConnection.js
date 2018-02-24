@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
-  config = require('../config/Config'),
-  dburl = config.MONGO_URI;
+    config = require('../config/Config'),
+    dburl = config.MONGO_URI;
 
 // CAPTURE APP TERMINATION / RESTART EVENTS
 // To be called when process is restarted or terminated
@@ -43,6 +43,7 @@ process.on('SIGTERM', function() {
   });
 });
 
+// Database Connection
 mongoose.connect(dburl, function(err) {
   if (!err) {
     return console.log('Successfully connected to the database');

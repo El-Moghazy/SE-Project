@@ -8,7 +8,7 @@ import { ThemeModule } from './@theme/theme.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { TeamComponent } from './team/team.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [AppComponent],

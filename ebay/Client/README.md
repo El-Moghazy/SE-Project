@@ -1,5 +1,6 @@
-# angular-seed-project
-A starter Angular 5 frontend template using ng-bootstrap(a native Angular implementation of Bootstrap 4, with no jQuery usage) and Nebular framework. 
+# Mini E-bay Frontend Angular
+
+A starter Angular 5 frontend template using ng-bootstrap _(a native Angular implementation of Bootstrap 4, with no jQuery usage)_ and Nebular framework.
 
 ## Technology:
 
@@ -7,10 +8,13 @@ A starter Angular 5 frontend template using ng-bootstrap(a native Angular implem
 * [ng-bootstrap](https://ng-bootstrap.github.io)
 * [Nebular](https://akveo.github.io/nebular/#/docs/getting-started/what-is-nebular)
 
-## How to run?
+## How to run:
 
-1. Clone the repo.
-2. npm install
-3. ng serve
+Clone the repo.
 
-&#9400; Omar Doma 2018
+```
+npm install
+ng serve
+```
+
+&#9400; SE-T20 Team
