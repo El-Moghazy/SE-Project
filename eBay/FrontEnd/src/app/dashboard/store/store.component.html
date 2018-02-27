@@ -6,8 +6,9 @@
       {{ product.name}}
     </div>
     <div class="card-body">
-      <h5 class="card-title">{{ product.price | currency }}</h5>
-      <a href="#" class="btn btn-primary " ><span class="glyphicon glyphicon-shopping-cart"></span>Buy</a>
+      <h3 class="card-title">{{ product.price | currency }}</h3>
+      <h5 class="card-title">{{ product.sellerName}}</h5>
+      <a href="#" class="btn btn-primary " >Add to cart</a>
     </div>
     <div class="card-footer text-muted">
       {{ product.createdAt | date}}
