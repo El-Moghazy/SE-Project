@@ -5,10 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ThemeModule } from './@theme/theme.module';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +19,10 @@ import { TeamComponent } from './components/team/team.component';
     BrowserAnimationsModule,
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+
+    FormsModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
