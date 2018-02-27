@@ -1,21 +1,18 @@
-<div class="container">
-  <h1>Product List</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>price</th>
-        <th>Seller Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of ProductsList">
-        <td>{{ product.name }}</td>
-        <td>{{ product.price }}</td>
-        <td>{{ product.sellerName }}</td>
-        <td>Show Detail</td>
-      </tr>
-    </tbody>
-  </table>
+
+<div class="row">
+<div class="col-lg-4 col-md-4"  *ngFor="let product of ProductsList">
+  <div class="card text-center">
+    <div class="card-header">
+      {{ product.name}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ product.price | currency }}</h5>
+      <a href="#" class="btn btn-primary " ><span class="glyphicon glyphicon-shopping-cart"></span>Buy</a>
+    </div>
+    <div class="card-footer text-muted">
+      {{ product.createdAt | date}}
+    </div>
+  </div>
+</div>
+
 </div>
