@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 
 var productSchema = mongoose.Schema({
-  // TODO: Modify Schema
   name: {
     type: String,
     required: true,
