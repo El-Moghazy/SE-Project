@@ -1,0 +1,19 @@
+<div class="header-container left">
+  <div class="logo-containter">
+    <a (click)="toggleSidebar()" class="navigation">
+      <i class="nb-menu"></i>
+    </a>
+    <div class="logo" (click)="goToHome()">
+      <img src="../../../../favicon.png" style="width: 50px; height: 50px; border-radius: 50%;" />
+      T20: 
+      <span>Game of Geeks!</span>
+    </div>
+  </div>
+  <ngx-theme-switcher></ngx-theme-switcher>
+</div>
+
+<nb-actions size="medium" class="header-container right">
+  <nb-action>
+    <nb-user [menu]="userMenu" [name]="user?.username" (menuClick)="onMenuClick($event)"></nb-user>
+  </nb-action>
+</nb-actions>
