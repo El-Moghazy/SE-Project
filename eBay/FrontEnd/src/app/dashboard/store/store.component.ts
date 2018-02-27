@@ -24,7 +24,7 @@ export class StoreComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.http.get('http://localhost:3000/api/product/getProducts').subscribe(res => {this.ProductsList = res.data;});
+    this.http.get('http://localhost:3000/api/product/getProducts').subscribe((res:any) => {this.ProductsList = res.data;});
   }
 
 }
