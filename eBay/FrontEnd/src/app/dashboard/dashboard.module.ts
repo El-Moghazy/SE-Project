@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 
 /* Services Modules */
 import { StoreService } from '../services/store.service';
+import { ItemsComponent } from './items/items.component';
 
 @NgModule({
   imports: [ThemeModule, DashboardRoutingModule, HttpModule, FormsModule],
@@ -24,6 +25,7 @@ import { StoreService } from '../services/store.service';
     DashboardComponent,
     TeamComponent,
     StoreComponent,
+    ItemsComponent,
     AboutComponent
   ],
   entryComponents: [],
