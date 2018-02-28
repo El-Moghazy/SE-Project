@@ -18,6 +18,8 @@ import { AboutComponent } from './about/about.component';
 /* Services Modules */
 import { StoreService } from '../services/store.service';
 import { ItemsComponent } from './items/items.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   imports: [ThemeModule, DashboardRoutingModule, HttpModule, FormsModule],
@@ -26,7 +28,9 @@ import { ItemsComponent } from './items/items.component';
     TeamComponent,
     StoreComponent,
     ItemsComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent,
+    SignupComponent
   ],
   entryComponents: [],
   providers: [
