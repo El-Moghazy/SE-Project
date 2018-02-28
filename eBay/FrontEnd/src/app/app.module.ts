@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+import {ValidateService} from './services/validate.service';
+import {AuthService} from './services/auth.service';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -25,6 +28,6 @@ import { AppComponent } from './app.component';
     HttpClientModule
   ],
   bootstrap: [AppComponent],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }  , ValidateService , AuthService]
 })
 export class AppModule {}

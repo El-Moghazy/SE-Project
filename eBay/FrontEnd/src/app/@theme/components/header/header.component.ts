@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.userMenu = [{ title: 'profile' }, { title: 'Logout' }];
+    this.userMenu = [{ title: 'register' ,  link: '/dashboard/signup'}, { title: 'login' , link: '/dashboard/login' }];
   }
 
   toggleSidebar(): boolean {
