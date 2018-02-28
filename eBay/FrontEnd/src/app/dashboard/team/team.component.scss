@@ -1,7 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .column {
   float: left;
-  width: 20%;
-  margin-bottom: 8px;
+  width: 33.3%;
+  margin-bottom: 16px;
   padding: 0 8px;
 }
 
@@ -18,7 +26,6 @@
 
 .container {
   padding: 0 16px;
-  background-color: #C0C0C0 ;
 }
 
 .container::after, .row::after {
@@ -45,4 +52,20 @@
 
 .button:hover {
   background-color: #555;
+}
+
+
+
+img{
+  max-height: 300px;
+  min-height: 300px;}
+
+
+  *
+  {
+    color: #000 !important;
+  }
+
+  h4 {
+    white-space: nowrap;
 }
