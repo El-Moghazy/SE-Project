@@ -3,7 +3,7 @@ var express = require('express'),
     productCtrl = require('../controllers/ProductController'),
     jwt = require('jsonwebtoken'),
     config = require('../config/Config'),
-    User = require('../models/user.js');
+    User = require('../models/User.js');
 
 //-------------------------------Product Routes-----------------------------------
 router.get('/product/getProducts', productCtrl.getProducts);

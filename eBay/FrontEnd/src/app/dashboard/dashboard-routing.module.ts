@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard.component';
 import { StoreComponent } from './store/store.component';
 import { AboutComponent } from './about/about.component';
 import { TeamComponent } from './team/team.component';
+import { ItemsComponent } from './items/items.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
@@ -16,7 +17,7 @@ const routes: Routes = [
     children: [
       {
         path: 'items',
-        loadChildren: './items/items.module#ItemsModule'
+        component: ItemsComponent
       },
       { path: 'store',
         component: StoreComponent
