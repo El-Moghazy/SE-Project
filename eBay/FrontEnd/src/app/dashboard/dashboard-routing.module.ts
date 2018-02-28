@@ -43,7 +43,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'items',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
       }
     ]

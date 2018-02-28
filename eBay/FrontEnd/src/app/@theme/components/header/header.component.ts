@@ -33,6 +33,14 @@ export class HeaderComponent implements OnInit {
     this.menuService.navigateHome();
   }
 
+  signup() {
+    this.router.navigate(['dashboard/signup']);
+  }
+
+  login() {
+    this.router.navigate(['dashboard/login']);
+  }
+
   onMenuClick(event) {
     if (event.title === 'Logout') {
         this.authService.logout();

@@ -18,16 +18,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/dashboard/store'
   },
   {
-    title: 'Login',
-    icon: 'fa fa-sign-in-alt',
-    link: '/dashboard/login'
-  },
-  {
-    title: 'Sign Up',
-    icon: 'fa fa-user-plus',
-    link: '/dashboard/signup'
-  },
-  {
     title: 'Team',
     icon: 'fa fa-users',
     link: '/dashboard/team'
