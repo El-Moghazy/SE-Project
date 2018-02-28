@@ -21,6 +21,7 @@ import { SignupComponent } from './signup/signup.component';
 /* Services Modules */
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
+import { AuthGuardService } from '../services/auth-guard.service';
 import { ToastrService } from '../services/toastr.service';
 import { StoreService } from '../services/store.service';
 
@@ -41,6 +42,7 @@ import { StoreService } from '../services/store.service';
   providers: [
     AuthService,
     UserService,
+    AuthGuardService,
     ToastrService,
     StoreService
   ]

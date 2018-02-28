@@ -32,8 +32,8 @@ export class SignupComponent implements OnInit {
                 private router: Router,
                 private toastr: ToastrService) {}
 
-  username = new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(16)]);
-  password = new FormControl('', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')]);
+  username = new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]);
+  password = new FormControl('', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{3,12}$')]);
   retypepass = new FormControl('', [Validators.required]);
 
 
