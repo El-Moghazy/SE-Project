@@ -17,6 +17,8 @@ const routes: Routes = [
     children: [
       {
         path: 'items',
+        // TODO
+        // canActivate: [ AuthGuard],
         component: ItemsComponent
       },
       { path: 'store',

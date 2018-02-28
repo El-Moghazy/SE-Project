@@ -3,7 +3,7 @@ import { ThemeModule } from '../@theme/theme.module';
 
 /* Api Modules */
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /* Routing Modules */
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -14,15 +14,20 @@ import { DashboardComponent } from './dashboard.component';
 import { TeamComponent } from './team/team.component';
 import { StoreComponent } from './store/store.component';
 import { AboutComponent } from './about/about.component';
-
-/* Services Modules */
-import { StoreService } from '../services/store.service';
 import { ItemsComponent } from './items/items.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
+/* Services Modules */
+import { AuthService } from '../services/auth.service';
+import { UserService } from '../services/user.service';
+import { ToastrService } from '../services/toastr.service';
+import { StoreService } from '../services/store.service';
+
+
+
 @NgModule({
-  imports: [ThemeModule, DashboardRoutingModule, HttpModule, FormsModule],
+  imports: [ThemeModule, DashboardRoutingModule, HttpModule, FormsModule, ReactiveFormsModule],
   declarations: [
     DashboardComponent,
     TeamComponent,
@@ -34,6 +39,9 @@ import { SignupComponent } from './signup/signup.component';
   ],
   entryComponents: [],
   providers: [
+    AuthService,
+    UserService,
+    ToastrService,
     StoreService
   ]
 })

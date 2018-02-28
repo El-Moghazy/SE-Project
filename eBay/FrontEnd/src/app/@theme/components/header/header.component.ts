@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
+import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'ngx-header',
@@ -13,11 +15,13 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private sidebarService: NbSidebarService,
-    private menuService: NbMenuService
+    private menuService: NbMenuService,
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit() {
-    this.userMenu = [{ title: 'profile' }, { title: 'Logout' }];
+    this.userMenu = [{ title: 'Logout' }];
   }
 
   toggleSidebar(): boolean {
@@ -31,7 +35,9 @@ export class HeaderComponent implements OnInit {
 
   onMenuClick(event) {
     if (event.title === 'Logout') {
-      // Think about what to do ;)
+        this.authService.logout();
+        // this.toastr.success('You have been logged out.'); // TODO:
+        this.router.navigate(['dashboard/login']);
     }
   }
 }
