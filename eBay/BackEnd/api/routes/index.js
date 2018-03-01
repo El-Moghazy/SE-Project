@@ -1,9 +1,9 @@
 var express = require('express'),
-    router = express.Router(),
-    productCtrl = require('../controllers/ProductController'),
-    jwt = require('jsonwebtoken'),
-    config = require('../config/Config'),
-    User = require('../models/User.js');
+  router = express.Router(),
+  productCtrl = require('../controllers/ProductController'),
+  jwt = require('jsonwebtoken'),
+  config = require('../config/Config'),
+  User = require('../models/User.js');
 
 //-------------------------------Product Routes-----------------------------------
 router.get('/product/getProducts', productCtrl.getProducts);
@@ -18,6 +18,90 @@ router.delete('/product/deleteProduct/:productId', productCtrl.deleteProduct);
 
 
 //-------------------------------User Routes-----------------------------------
+
+//Returns the updated user cart 
+router.post('/product/addToCart/:productId', (req, res, next) => {
+  let productId = req.params.productId;
+  User.findByIdAndUpdate(
+    req.body.id,
+    {
+      $push: { cartItems: productId }
+    },
+    { new: true }
+  ).exec(function (err, user) {
+    if (err) {
+      return next(err);
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Product added successfully.',
+      data: user
+    });
+  });
+
+
+});
+
+router.delete('/product/deleteCart/:userID', (req, res, next) => {
+  User.findByIdAndUpdate(
+    req.params.userID,
+    {
+      $set: { cartItems: [] }
+    },
+    { new: true }
+  ).exec(function (err, user) {
+    if (err) {
+      return next(err);
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Cart flushed successfully.',
+      data: user.cartItems
+    });
+  });
+});
+
+router.delete('/product/deleteCartItem/:userID/:productID', (req, res, next) => {
+  User.findByIdAndUpdate(
+    req.params.userID,
+    {
+      $pull: { cartItems: req.params.productID }
+    },
+    { new: true }
+  ).exec(function (err, user) {
+    if (err) {
+      return next(err);
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Cart updated successfully.',
+      data: user.cartItems
+    });
+  });
+});
+
+router.get('/user/getUser/:id', (req,res,next) =>{
+
+
+  User.findById(req.params.id).exec(function (err, user) {
+    if (err) {
+      return next(err);
+    }
+    if (!user) {
+      return res
+        .status(404)
+        .json({ err: null, msg: 'User not found.', data: null });
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'User retrieved successfully.',
+      data: user
+    });
+  });
+
+
+});
+
 
 //Registeration
 router.post('/register', (req, res, next) => {
@@ -77,35 +161,35 @@ router.post('/login', (req, res, next) => {
     //Check if the password is correct
     user.isPasswordMatch(password, user.password, (err, isMatch) => {
 
-        //Invalid password
-        if (!isMatch) {
-          return res.send({
-            success: false,
-            message: 'Error, Invalid Username or Password'
-          });
-        }
-
-        // User is Valid
-
-        const ONE_WEEK = 604800; // Token validtity in seconds
-
-        // Generating the token
-        const token = jwt.sign({ user }, config.SECRET, { expiresIn: ONE_WEEK });
-
-        // User Is Valid
-        // This object is just used to remove the password from the retuned fields
-        let returnUser = {
-          username: user.username,
-          id: user._id
-        }
-
-        //Send the response back
+      //Invalid password
+      if (!isMatch) {
         return res.send({
-          success: true,
-          message: 'You can login now',
-          user: returnUser,
-          token
+          success: false,
+          message: 'Error, Invalid Username or Password'
         });
+      }
+
+      // User is Valid
+
+      const ONE_WEEK = 604800; // Token validtity in seconds
+
+      // Generating the token
+      const token = jwt.sign({ user }, config.SECRET, { expiresIn: ONE_WEEK });
+
+      // User Is Valid
+      // This object is just used to remove the password from the retuned fields
+      let returnUser = {
+        username: user.username,
+        id: user._id
+      }
+
+      //Send the response back
+      return res.send({
+        success: true,
+        message: 'You can login now',
+        user: returnUser,
+        token
+      });
     });
   });
 });

@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { ItemsComponent } from './items/items.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { CartComponent } from './cart/cart.component';
 
 /* Services Modules */
 import { AuthService } from '../services/auth.service';
@@ -37,7 +38,8 @@ import {ToasterModule} from 'angular5-toaster';
     ItemsComponent,
     AboutComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CartComponent
   ],
   entryComponents: [],
   providers: [

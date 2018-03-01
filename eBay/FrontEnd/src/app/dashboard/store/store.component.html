@@ -8,7 +8,7 @@
     <div class="card-body">
       <h3 class="card-title">{{ product.price | currency }}</h3>
       <h5 class="card-title">{{ product.name}}</h5>
-      <a href="#" class="btn btn-primary " >Add to cart</a>
+      <a href="#" class="btn btn-primary " (click)="addItemToCart(product._id)" >Add to cart <i class="fas fa-cart-plus"></i></a>
     </div>
     <div class="card-footer text-muted">
       Listed on: {{ product.createdAt | date}}
