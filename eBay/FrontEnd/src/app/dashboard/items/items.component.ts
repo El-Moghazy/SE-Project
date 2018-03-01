@@ -16,7 +16,8 @@ import { Observable } from 'rxjs/Observable';
 export class ItemsComponent {
 
   myProducts: any;
-  productName;  productPrice; currentUser;
+  productID; productName;  productPrice; currentUser;
+  productToBeEdited: any;
   newOrEdit = false;  createNew = false;  editPressed = false;
 
   constructor(
@@ -74,7 +75,41 @@ export class ItemsComponent {
         ;
   }
 
-  editProduct(productID) {
+  selectProduct(product) {
+    this.productToBeEdited = product;
+    console.log(this.productToBeEdited);
+  }
+
+  editProduct() {
+
+    this.productID = this.productToBeEdited._id;
+
+    let updatedProduct = {
+      name: this.productName,
+      price: Number(this.productPrice)
+    };
+
+    this.http.patch('http://localhost:3000/api/product/updateProduct/' + this.productID , updatedProduct)
+      .catch(err => {
+        this.toaster.pop({
+          type: 'error',
+          title: "Error!",
+          body: "name(String) and price(Number) are required fields.",
+          timeout: 3000
+        });
+        return Observable.throw(err)
+      })
+      .subscribe(res => {
+        this.toaster.pop({
+          type: 'success',
+          title: "Success!",
+          body: "You've been successfully Updated The Product!",
+          timeout: 3000
+        });
+        this.getMyProducts();
+        this.newOrEdit = false;
+        this.editPressed = false;
+      });
 
   }
 
