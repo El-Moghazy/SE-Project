@@ -3,15 +3,15 @@
 <div class="col-lg-4 col-md-4"  *ngFor="let product of ProductsList">
   <div class="card text-center">
     <div class="card-header">
-      {{ product.name}}
+      Sold by: {{ product.sellerName}}
     </div>
     <div class="card-body">
       <h3 class="card-title">{{ product.price | currency }}</h3>
-      <h5 class="card-title">{{ product.sellerName}}</h5>
+      <h5 class="card-title">{{ product.name}}</h5>
       <a href="#" class="btn btn-primary " >Add to cart</a>
     </div>
     <div class="card-footer text-muted">
-      {{ product.createdAt | date}}
+      Listed on: {{ product.createdAt | date}}
     </div>
   </div>
 </div>

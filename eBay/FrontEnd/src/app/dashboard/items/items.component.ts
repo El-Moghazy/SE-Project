@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-items',
-  templateUrl: './items-component.html'
+  templateUrl: './items.component.html'
 })
 export class ItemsComponent {
 

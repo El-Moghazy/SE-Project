@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ToastrService } from '../../services/toastr.service'
+import { ToasterService } from 'angular5-toaster';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder,
                 private authService: AuthService,
                 private router: Router,
-                private toastr: ToastrService) { } // TODO: Replace toaster with flash card
+                private toaster: ToasterService
+  )
+                { } 
 
   username = new FormControl('', [Validators.required]);
   password = new FormControl('', [Validators.required]);
@@ -30,9 +32,19 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.loginForm.value)
         .subscribe(data => {
           if (data.json().success === false) {
-            // this.toastr.error(data.json().message); // TODO: Replace toaster with flash card
+            this.toaster.pop({
+              type: 'error',
+              title: "Error!",
+              body: data.json().message,
+              timeout: 3000
+            });
           } else {
-            // this.toastr.success('Login successful.'); // TODO: Replace toaster with flash card
+            this.toaster.pop({
+              type: 'success',
+              title: "Success!",
+              body: "You've been successfully logged in!",
+              timeout: 3000
+            });
             this.router.navigate(['dashboard/items']);
           }
           this.loginForm.reset();

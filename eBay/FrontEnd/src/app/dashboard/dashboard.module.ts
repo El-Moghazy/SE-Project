@@ -22,13 +22,14 @@ import { SignupComponent } from './signup/signup.component';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 import { AuthGuardService } from '../services/auth-guard.service';
-import { ToastrService } from '../services/toastr.service';
 import { StoreService } from '../services/store.service';
+import {ToasterModule} from 'angular5-toaster';
+
 
 
 
 @NgModule({
-  imports: [ThemeModule, DashboardRoutingModule, HttpModule, FormsModule, ReactiveFormsModule],
+  imports: [ThemeModule, DashboardRoutingModule, HttpModule, FormsModule, ReactiveFormsModule,ToasterModule],
   declarations: [
     DashboardComponent,
     TeamComponent,
@@ -43,7 +44,6 @@ import { StoreService } from '../services/store.service';
     AuthService,
     UserService,
     AuthGuardService,
-    ToastrService,
     StoreService
   ]
 })

@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ToastrService } from '../../services/toastr.service'; // TODO: replace this
+import { ToasterService } from 'angular5-toaster';
 import { UserService } from '../../services/user.service';
 
-function comparePassword(c: AbstractControl): {[key: string]: boolean} | null {
-    let passwordControl = c.get('password');
-    let confirmControl = c.get('retypepass');
+function comparePassword(c: AbstractControl): { [key: string]: boolean } | null {
+  let passwordControl = c.get('password');
+  let confirmControl = c.get('retypepass');
 
-    if (passwordControl.pristine || confirmControl.pristine) {
-      return null;
-    }
+  if (passwordControl.pristine || confirmControl.pristine) {
+    return null;
+  }
 
-    if (passwordControl.value === confirmControl.value) {
-        return null;
-    }
-    return { 'mismatchedPassword': true };
+  if (passwordControl.value === confirmControl.value) {
+    return null;
+  }
+  return { 'mismatchedPassword': true };
 }
 
 @Component({
@@ -28,9 +28,10 @@ export class SignupComponent implements OnInit {
   registerForm: FormGroup;
 
   constructor(private fb: FormBuilder,
-                private userService: UserService,
-                private router: Router,
-                private toastr: ToastrService) {}
+    private userService: UserService,
+    private router: Router,
+    private toaster: ToasterService
+  ) { }
 
   username = new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]);
   password = new FormControl('', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{3,12}$')]);
@@ -44,11 +45,11 @@ export class SignupComponent implements OnInit {
       passwordGroup: this.fb.group({
         password: this.password,
         retypepass: this.retypepass,
-      }, {validator: comparePassword})
+      }, { validator: comparePassword })
     });
   }
 
-  registerUser(formdata:any): void {
+  registerUser(formdata: any): void {
     if (this.registerForm.dirty && this.registerForm.valid) {
       let theForm = this.registerForm.value;
       const thePass = this.registerForm.value.passwordGroup.password;
@@ -58,13 +59,23 @@ export class SignupComponent implements OnInit {
       this.userService.register(theForm)
         .subscribe(data => {
           if (data.success === false) {
-            // this.toastr.error(data.message); // TODO:
+            this.toaster.pop({
+              type: 'error',
+              title: "Error!",
+              body: data.message,
+              timeout: 3000
+            });
           } else {
-            // this.toastr.success(data.message); // TODO:
+            this.toaster.pop({
+              type: 'success',
+              title: "Success!",
+              body: data.message,
+              timeout: 3000
+            });
             this.router.navigate(['/dashboard/login']);
           }
           this.registerForm.reset();
-      });
+        });
     }
   }
 

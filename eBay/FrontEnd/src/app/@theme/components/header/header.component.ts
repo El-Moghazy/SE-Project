@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
+import { ToasterService } from 'angular5-toaster';
 
 @Component({
   selector: 'ngx-header',
@@ -17,7 +18,8 @@ export class HeaderComponent implements OnInit {
     private sidebarService: NbSidebarService,
     private menuService: NbMenuService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private toaster: ToasterService
   ) {}
 
   ngOnInit() {
@@ -44,7 +46,12 @@ export class HeaderComponent implements OnInit {
   onMenuClick(event) {
     if (event.title === 'Logout') {
         this.authService.logout();
-        // this.toastr.success('You have been logged out.'); // TODO:
+        this.toaster.pop({
+          type: 'success',
+          title: "Success!",
+          body: "You've been logged out",
+          timeout: 3000
+        });
         this.router.navigate(['dashboard/login']);
     }
   }
