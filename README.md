@@ -16,7 +16,7 @@
 _**Server:**_
 
 ```
-cd ebay
+cd eBay/BackEnd
 npm install
 npm start
 ```
@@ -24,9 +24,9 @@ npm start
 _**Angular:**_
 
 ```
-cd ebay/Client
+cd eBay/FrontEnd
 npm install
-ng serve -o
+ng serve --open
 ```
 
 ## About:
