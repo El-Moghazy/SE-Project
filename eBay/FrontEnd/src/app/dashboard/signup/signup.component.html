@@ -36,7 +36,7 @@
                           Please enter password
                       </span>
                       <span class="col-sm-10" style="padding:4px 0 0" *ngIf="registerForm.get('passwordGroup.password').errors.pattern">
-                          Password must contain one letter, number & special characters
+                          Password must contain at least one capital letter, one small letter, number & special characters
                       </span>
                   </div>
 
@@ -73,10 +73,3 @@
     </nb-card>
   </nb-layout-column>
 </nb-layout>
-
-
-<!-- <input class="form-control" id="fullname" placeholder="FullName"><br>
-<input class="form-control" id="email" placeholder="Email"><br>
-<input class="form-control" id="username" placeholder="Username"><br>
-<input class="form-control" type="password" id="password" placeholder="Password"><br>
-<button type="submit" class="btn btn-hero-success main-btn ccenter">SignUp!</button> -->

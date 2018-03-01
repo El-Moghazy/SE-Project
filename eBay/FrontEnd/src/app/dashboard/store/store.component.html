@@ -3,15 +3,14 @@
 <div class="col-lg-4 col-md-4"  *ngFor="let product of ProductsList">
   <div class="card text-center">
     <div class="card-header">
-      Sold by: {{ product.sellerName}}
+      <h2> {{ product.name}} </h2>
     </div>
     <div class="card-body">
       <h3 class="card-title">{{ product.price | currency }}</h3>
-      <h5 class="card-title">{{ product.name}}</h5>
       <a href="#" class="btn btn-primary " (click)="addItemToCart(product._id)" >Add to cart <i class="fas fa-cart-plus"></i></a>
     </div>
     <div class="card-footer text-muted">
-      Listed on: {{ product.createdAt | date}}
+      Listed on: <strong>{{ product.createdAt | date }}</strong> | Sold by: <strong>{{ product.sellerName }}</strong>
     </div>
   </div>
 </div>

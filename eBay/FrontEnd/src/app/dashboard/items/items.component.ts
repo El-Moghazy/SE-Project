@@ -6,6 +6,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormControl, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Observable } from 'rxjs/Observable';
+import { Pipe } from "@angular/core";
+import { DatePipe } from "@angular/common";
 
 
 
@@ -44,6 +46,11 @@ export class ItemsComponent {
 
   }
 
+  clearInput() {
+    this.productName = "";
+    this.productPrice = "";
+  }
+
   newProduct() {
     let newProduct = {
       name: this.productName,
@@ -77,7 +84,8 @@ export class ItemsComponent {
 
   selectProduct(product) {
     this.productToBeEdited = product;
-    console.log(this.productToBeEdited);
+    this.productName = this.productToBeEdited.name;
+    this.productPrice = this.productToBeEdited.price;
   }
 
   editProduct() {

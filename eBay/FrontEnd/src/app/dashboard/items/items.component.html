@@ -3,7 +3,7 @@
     <div class="page-header">
       <h2 class="page-title">My Products List</h2>
       <div class="pull-right">
-        <button (click)="newOrEdit = true; createNew = true; editPressed = false;" class="btn btn-primary">+</button>
+        <button (click)="clearInput(); newOrEdit = true; createNew = true; editPressed = false;" class="btn btn-primary">+</button>
       </div>
     </div>
     <table class="table table-striped table-hover" id="myProductTable">
@@ -22,8 +22,8 @@
           <td> {{ i + 1 }} </td>
           <td> {{ product.name }}</td>
           <td> {{ product.price | currency }}</td>
-          <td> {{ product.createdAt | date}}</td>
-          <td> {{ product.updatedAt | date}}</td>
+          <td> {{ product.createdAt | date:'medium' }}</td>
+          <td> {{ product.updatedAt | date:'medium' }}</td>
           <td>
             <button (click)="deleteProduct(product._id)"  class="btn btn-danger">Delete</button>
             <button (click)="selectProduct(product); newOrEdit = true; editPressed = true; createNew = false;"  class="btn btn-info">Edit</button>
@@ -38,6 +38,13 @@
 <nb-card size="small" *ngIf="newOrEdit">
   <nb-card-body>
 
+    <div class="page-header">
+      <h4 class="page-title">Actions: <em>Add || Edit</em></h4>
+      <div class="pull-right">
+        <button (click)="newOrEdit = false; createNew = false; editPressed = false;" class="btn btn-primary">x</button>
+      </div>
+    </div>
+
     <table class="table table-striped table-hover" id="myProductTable">
       <thead>
         <tr>
@@ -48,8 +55,8 @@
       </thead>
       <tbody>
         <tr>
-          <td><input class="form-control" id="productName" [(ngModel)]="productName" placeholder="Product Name"><br></td>
-          <td><input class="form-control" id="productPrice" [(ngModel)]="productPrice" placeholder="Product Price"><br></td>
+          <td><input class="form-control" id="productName" [(ngModel)]="productName" placeholder="Product Name" value="{{ productName }}"><br></td>
+          <td><input class="form-control" id="productPrice" [(ngModel)]="productPrice" placeholder="Product Price" value="{{ productPrice }}"><br></td>
           <td>
             <button (click)="editProduct()"  class="btn btn-hero-success" *ngIf="editPressed">Submit</button>
             <button (click)="newProduct()"  class="btn btn-hero-success" *ngIf="createNew">Create</button>

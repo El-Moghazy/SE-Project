@@ -12,19 +12,26 @@
 # <h2 align="center">  Sprint 1: E-bay </h2>
 
 ## Getting Started:
+> Open **3** Terminals and run each of the following command
 
 _**Server:**_
 
 ```
-cd ebay
+cd eBay/BackEnd
 npm install
 npm start
+```
+
+_**DataBase:**_
+
+```
+mongod
 ```
 
 _**Angular:**_
 
 ```
-cd ebay/Client
+cd eBay/FrontEnd
 npm install
 ng serve -o
 ```
