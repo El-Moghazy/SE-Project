@@ -2,23 +2,35 @@
   <nb-card-body>
     <div class="page-header">
       <h2 class="page-title">My Products List</h2>
+      <div class="pull-left">
+        <input class="form-control" type="text" name="search" [(ngModel)]="filter" placeholder="Search">
+      </div>
       <div class="pull-right">
         <button (click)="clearInput(); newOrEdit = true; createNew = true; editPressed = false;" class="btn btn-primary">+</button>
       </div>
     </div>
+    <br><br><br>
     <table class="table table-striped table-hover" id="myProductTable">
       <thead>
         <tr>
           <th>#</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Created @</th>
-          <th>Updated @</th>
+          <th (click)="sort('name')">Name
+            <span class="fa fa-sort"></span>
+          </th>
+          <th (click)="sort('price')">Price
+            <span class="fa fa-sort"></span>
+          </th>
+          <th (click)="sort('createdAt')">Created @
+            <span class="fa fa-sort"></span>
+          </th>
+          <th (click)="sort('updatedAt')">Updated @
+            <span class="fa fa-sort"></span>
+          </th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of myProducts; let i = index ">
+        <tr *ngFor="let product of myProducts | orderBy: key : reverse | filter:filter | paginate: { itemsPerPage: 4, currentPage: p }; let i = index ">
           <td> {{ i + 1 }} </td>
           <td> {{ product.name }}</td>
           <td> {{ product.price | currency }}</td>
@@ -30,6 +42,8 @@
           </td>
         </tr>
       </tbody>
+      <br>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </table>
   </nb-card-body>
 </nb-card>

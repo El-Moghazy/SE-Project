@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { ThemeModule } from '../@theme/theme.module';
 
+/* Search Library */
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 /* Api Modules */
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,7 +35,8 @@ import {ToasterModule} from 'angular5-toaster';
 
 
 @NgModule({
-  imports: [ThemeModule, DashboardRoutingModule, HttpModule, FormsModule, ReactiveFormsModule,ToasterModule],
+  imports: [ThemeModule, DashboardRoutingModule, HttpModule, FormsModule,
+    ReactiveFormsModule,ToasterModule, Ng2SearchPipeModule, Ng2OrderModule, NgxPaginationModule],
   declarations: [
     DashboardComponent,
     TeamComponent,

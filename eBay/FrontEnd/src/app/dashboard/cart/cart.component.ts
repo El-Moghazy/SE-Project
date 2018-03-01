@@ -12,10 +12,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CartComponent implements OnInit {
   cartItems = [];
+
+  key: string = 'name'; //set default
+  reverse: boolean = false;
+  sort(key){
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
+  // Pagination: initializing p to one
+  p: number = 1;
+
   constructor(
     private authService: AuthService,
     private http: Http,
-    private toaster: ToasterService,    
+    private toaster: ToasterService,
     private httpClient: HttpClient
 
   ) {
@@ -42,7 +52,7 @@ export class CartComponent implements OnInit {
   }
 
   checkout(){
-    let userID = JSON.parse(localStorage.getItem('currentUser')).user.id;    
+    let userID = JSON.parse(localStorage.getItem('currentUser')).user.id;
     this.http.delete('http://localhost:3000/api/product/deleteCart/'+ userID).subscribe(res =>{
       this.cartItems = [];
       this.toaster.pop({
@@ -53,7 +63,7 @@ export class CartComponent implements OnInit {
       });
     });
   }
-  
+
   removeItem(item) {
     let userID = JSON.parse(localStorage.getItem('currentUser')).user.id;
     this.http.delete('http://localhost:3000/api/product/deleteCartItem/'+ userID+ '/' + item._id ).subscribe(res =>{
@@ -65,8 +75,8 @@ export class CartComponent implements OnInit {
         timeout: 2000
       });
     });
-    
-    
+
+
   }
 
 }

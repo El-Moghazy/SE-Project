@@ -20,7 +20,8 @@ export class StoreComponent implements OnInit {
 
   public ProductsList = [];
 
-  // ProductsList: any;
+  // Pagination: initializing p to one
+  p: number = 1;
 
   constructor(
     private httpClient: HttpClient,
@@ -64,7 +65,7 @@ export class StoreComponent implements OnInit {
           body: "Item added to cart",
           timeout: 2000
         });
-        this.router.navigate(['dashboard/cart']);        
+        this.router.navigate(['dashboard/cart']);
 
       });
 

@@ -1,6 +1,9 @@
-
+<nav class="navbar">
+   <input class="form-control" type="text" name="search" [(ngModel)]="filter" placeholder="Search">
+</nav>
+<br>
 <div class="row">
-<div class="col-lg-4 col-md-4"  *ngFor="let product of ProductsList">
+<div class="col-lg-4 col-md-4"  *ngFor="let product of ProductsList | filter:filter | paginate: { itemsPerPage: 6, currentPage: p };">
   <div class="card text-center">
     <div class="card-header">
       <h2> {{ product.name}} </h2>
@@ -14,5 +17,6 @@
     </div>
   </div>
 </div>
-
 </div>
+<br>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

@@ -22,6 +22,16 @@ export class ItemsComponent {
   productToBeEdited: any;
   newOrEdit = false;  createNew = false;  editPressed = false;
 
+  // Table sorting
+  key: string = 'name'; //set default
+  reverse: boolean = false;
+  sort(key){
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
+  // Pagination: initializing p to one
+  p: number = 1;
+
   constructor(
     private http: Http,
     private toaster: ToasterService,
