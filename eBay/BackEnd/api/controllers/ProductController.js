@@ -3,6 +3,7 @@ var mongoose = require('mongoose'),
   Validations = require('../utils/Validations'),
   Product = mongoose.model('Product');
 
+
 module.exports.getProduct = function (req, res, next) {
   if (!Validations.isObjectId(req.params.productId)) {
     return res.status(422).json({
@@ -27,6 +28,20 @@ module.exports.getProduct = function (req, res, next) {
     });
   });
 };
+
+module.exports.getProductsBySellerName = function(req, res, next) {
+    console.log(req.params.sellerName)
+  Product.find({sellerName: req.params.sellerName}).exec(function(err, products) {
+    if (err) {
+      console.log(err)
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Products retrieved successfully.',
+      data: products
+    });
+  });
+  }
 
 module.exports.getProducts = function (req, res, next) {
   Product.find({}).exec(function (err, products) {

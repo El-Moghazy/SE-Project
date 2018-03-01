@@ -16,10 +16,12 @@ router.post('/product/createProduct', productCtrl.createProduct);
 router.patch('/product/updateProduct/:productId', productCtrl.updateProduct);
 router.delete('/product/deleteProduct/:productId', productCtrl.deleteProduct);
 
+router.get('/product/getProductsBySellerName/:sellerName', productCtrl.getProductsBySellerName);
+
 
 //-------------------------------User Routes-----------------------------------
 
-//Returns the updated user cart 
+//Returns the updated user cart
 router.post('/product/addToCart/:productId', (req, res, next) => {
   let productId = req.params.productId;
   User.findByIdAndUpdate(

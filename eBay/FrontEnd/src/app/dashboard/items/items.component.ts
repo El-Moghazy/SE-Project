@@ -35,15 +35,10 @@ export class ItemsComponent {
 
     var username = this.currentUser.user.username;
 
-    this.httpClient.get('http://localhost:3000/api/product/getProducts')
+    this.httpClient.get('http://localhost:3000/api/product/getProductsBySellerName/' + username)
       .subscribe((res: any) => {
         this.myProducts = res.data;
-        this.myProducts = this.myProducts.filter((product) => {
-          return product.sellerName == username
-        });
       });
-
-
   }
 
   clearInput() {
