@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToasterService } from 'angular5-toaster';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../services/auth.service';
 import { Http } from "@angular/http"
 import { HttpClient } from '@angular/common/http';
 

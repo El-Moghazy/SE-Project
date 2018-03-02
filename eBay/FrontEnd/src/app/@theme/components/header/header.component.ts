@@ -36,11 +36,11 @@ export class HeaderComponent implements OnInit {
   }
 
   signup() {
-    this.router.navigate(['dashboard/signup']);
+    this.router.navigate(['/signup']);
   }
 
   login() {
-    this.router.navigate(['dashboard/login']);
+    this.router.navigate(['/login']);
   }
 
   onMenuClick(event) {
@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
           body: "You've been logged out",
           timeout: 3000
         });
-        this.router.navigate(['dashboard/login']);
+        this.router.navigate(['/login']);
     }
   }
 }

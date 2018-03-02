@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToasterService } from 'angular5-toaster';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
               body: "You've been successfully logged in!",
               timeout: 3000
             });
-            this.router.navigate(['dashboard/items']);
+            this.router.navigate(['items']);
           }
           this.loginForm.reset();
         });

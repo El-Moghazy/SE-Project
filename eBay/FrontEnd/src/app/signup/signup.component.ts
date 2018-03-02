@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToasterService } from 'angular5-toaster';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../services/user.service';
 
 function comparePassword(c: AbstractControl): { [key: string]: boolean } | null {
   let passwordControl = c.get('password');
@@ -72,7 +72,7 @@ export class SignupComponent implements OnInit {
               body: data.message,
               timeout: 3000
             });
-            this.router.navigate(['/dashboard/login']);
+            this.router.navigate(['/login']);
           }
           this.registerForm.reset();
         });

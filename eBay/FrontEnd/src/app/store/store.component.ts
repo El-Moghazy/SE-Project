@@ -44,7 +44,7 @@ export class StoreComponent implements OnInit {
         body: "You need to login first to be able to use the cart system",
         timeout: 2000
       });
-      this.router.navigate(['dashboard/store']);
+      this.router.navigate(['/store']);
       return false;
     }
 
@@ -64,7 +64,7 @@ export class StoreComponent implements OnInit {
           body: "Item added to cart",
           timeout: 2000
         });
-        this.router.navigate(['dashboard/cart']);        
+        this.router.navigate(['/cart']);
 
       });
 

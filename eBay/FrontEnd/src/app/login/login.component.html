@@ -15,14 +15,21 @@
           <div class="text-danger" *ngIf="loginForm.get('password').dirty && loginForm.get('password').invalid">
               Please enter password
           </div>
+          <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+              <button type="submit" class="btn btn-hero-success main-btn ccenter" [disabled]="loginForm.invalid">Sign in</button>
+            </div>
+          </div>
 
-          <button type="submit" class="btn btn-hero-success main-btn ccenter" [disabled]="loginForm.invalid">Login</button>
+          <!--<button type="submit" class="btn btn-hero-success main-btn ccenter" [disabled]="loginForm.invalid">Login</button>-->
         </form>
 
-        <!-- TODO: Add Register route for new users -->
-        <!-- <div class="row">
-          <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right"><a [routerLink]="['/register']">Register</a></div>
-        </div> -->
+         <!--TODO: Add Register route for new users-->
+        <div class="form-group row">
+          <div class="offset-sm-2 col-sm-10">
+            <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right"><a routerLink="/signup" routerLinkActive="active">Register?</a></div>
+        </div>
+        </div>
 
       </nb-card-body>
     </nb-card>
