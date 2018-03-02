@@ -1,0 +1,22 @@
+<nav class="navbar">
+   <input class="form-control" type="text" name="search" [(ngModel)]="filter" placeholder="Search">
+</nav>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4"  *ngFor="let product of ProductsList | filter:filter | paginate: { itemsPerPage: 6, currentPage: p };">
+  <div class="card text-center">
+    <div class="card-header">
+      <h2> {{ product.name}} </h2>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">{{ product.price | currency }}</h3>
+      <a href="#" class="btn btn-primary " (click)="addItemToCart(product._id)" >Add to cart <i class="fas fa-cart-plus"></i></a>
+    </div>
+    <div class="card-footer text-muted">
+      Listed on: <strong>{{ product.createdAt | date }}</strong> | Sold by: <strong>{{ product.sellerName }}</strong>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

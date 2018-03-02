@@ -9,7 +9,32 @@
 
 ---
 
-# <h2 align="center">  Sprint 0 </h2>
+# <h2 align="center">  Sprint 1: eBay </h2>
+
+## Getting Started:
+> Open **3** Terminals and run each of the following command
+
+_**Server:**_
+
+```
+cd eBay/BackEnd
+npm install
+npm start
+```
+
+_**DataBase:**_
+
+```
+mongod
+```
+
+_**Angular:**_
+
+```
+cd eBay/FrontEnd
+npm install
+ng serve -o
+```
 
 ## About:
 | [<img src="https://avatars1.githubusercontent.com/u/25988116?s=400&u=9cd2f92228ae7c4ecb2c936f115590cc006c21c2&v=4" width="120px;" height="120px;"/><br /><sub><b>AbdElRhman ElMoghazy</b></sub>](https://github.com/MoghazyCoder)<br /> Deep Learning | [<img src="pics/Amr.jpg" width="120px;" height="120px;"/><br /><sub><b>Amr M. Kayid</b></sub>](https://github.com/AmrMKayid)<br /> I love music :notes:, coding 👨🏻‍💻 & coffee :coffee: | [<img src="pics/m3eeza.jpg" width="120px;" height="120px;"/><br /><sub><b>Mohamed Ibrahim</b></sub>](https://github.com/m3eeza)<br /> I like Football ⚽️ , music 🎶 , reading 📚 & coding 👨🏻‍💻

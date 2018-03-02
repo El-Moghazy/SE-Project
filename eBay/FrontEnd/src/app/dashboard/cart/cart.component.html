@@ -1,0 +1,47 @@
+<nb-card size="large">
+  <nb-card-body>
+    <div class="page-header">
+      <h2 class="page-title">Your cart</h2>
+      <div class="pull-left">
+        <input class="form-control" type="text" name="search" [(ngModel)]="filter" placeholder="Search">
+      </div>
+      <div class="pull-right">
+        <button (click)="checkout()" class="btn btn-primary align-right">Checkout
+          <i class="fas fa-credit-card"></i>
+        </button>
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col" (click)="sort('name')">Name
+            <span class="fa fa-sort"></span>
+          </th>
+          <th scope="col" (click)="sort('price')">Price
+            <span class="fa fa-sort"></span>
+          </th>
+          <th scope="col" (click)="sort('sellerName')">Seller
+            <span class="fa fa-sort"></span>
+          </th>
+          <th scope="col">Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems | orderBy: key : reverse | filter:filter | paginate: { itemsPerPage: 4, currentPage: p };">
+          <th scope="col">{{item.name}}</th>
+          <th scope="col">{{item.price | currency}}</th>
+          <th scope="col">{{item.sellerName}}</th>
+          <th scope="col" (click)="removeItem(item)">
+            <button class="btn btn-danger">Remove</button>
+          </th>
+        </tr>
+      </tbody>
+      <br>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </table>
+
+</nb-card-body>
+</nb-card>
