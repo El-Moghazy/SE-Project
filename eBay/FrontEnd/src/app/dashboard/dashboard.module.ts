@@ -30,6 +30,7 @@ import { UserService } from '../services/user.service';
 import { AuthGuardService } from '../services/auth-guard.service';
 import { StoreService } from '../services/store.service';
 import {ToasterModule} from 'angular5-toaster';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -45,7 +46,8 @@ import {ToasterModule} from 'angular5-toaster';
     AboutComponent,
     LoginComponent,
     SignupComponent,
-    CartComponent
+    CartComponent,
+    ProfileComponent
   ],
   entryComponents: [],
   providers: [

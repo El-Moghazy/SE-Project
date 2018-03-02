@@ -7,6 +7,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     routes = require('./api/routes/index'),
     config = require('./api/config/Config'),
+    User = require('./api/models/User.js');
 
 // Initialize app with express
 app = express();
