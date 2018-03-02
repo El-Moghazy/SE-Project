@@ -9,7 +9,7 @@
 
 ---
 
-# <h2 align="center">  Sprint 1: eBay </h2>
+# <h2 align="center">  Sprint 1: [Mini-eBay](https://mini-ebay.herokuapp.com/) </h2>
 
 ## Getting Started:
 > Open **3** Terminals and run each of the following command
