@@ -26,7 +26,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.userMenu = [{ title: 'Logout' }];
-    this.user = JSON.parse(localStorage.getItem('currentUser')).user;
+    if(JSON.parse(localStorage.getItem('currentUser')))
+      this.user = JSON.parse(localStorage.getItem('currentUser')).user;
   }
 
   toggleSidebar(): boolean {
