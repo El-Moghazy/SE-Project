@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.userMenu = [{ title: 'Logout' }];
+    this.userMenu = [{ title: 'Profile' }, { title: 'Logout' }];
     if(JSON.parse(localStorage.getItem('currentUser')))
       this.user = JSON.parse(localStorage.getItem('currentUser')).user;
   }
@@ -48,7 +48,18 @@ export class HeaderComponent implements OnInit {
   }
 
   onMenuClick(event) {
-    if (event.title === 'Logout') {
+
+    if (event.title === 'Profile') {
+        this.toaster.pop({
+          type: 'success',
+          title: "Success!",
+          body: "You'll go to profile",
+          timeout: 3000
+        });
+        this.router.navigate(['dashboard/profile']);
+    }
+
+    else if (event.title === 'Logout') {
         this.authService.logout();
         this.toaster.pop({
           type: 'success',

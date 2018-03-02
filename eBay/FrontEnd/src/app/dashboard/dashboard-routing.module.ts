@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AuthGuardService } from '../services/auth-guard.service';
 import { CartComponent } from './cart/cart.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -46,6 +47,11 @@ const routes: Routes = [
         path: 'cart',
         canActivate: [ AuthGuardService],
         component: CartComponent
+      },
+      {
+        path: 'profile',
+        canActivate: [ AuthGuardService],
+        component: ProfileComponent
       },
       {
         path: '',

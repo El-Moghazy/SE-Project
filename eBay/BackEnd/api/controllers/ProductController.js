@@ -1,7 +1,55 @@
 var mongoose = require('mongoose'),
   moment = require('moment'),
   Validations = require('../utils/Validations'),
+  User = mongoose.model('User'),
   Product = mongoose.model('Product');
+
+
+
+module.exports.getAllUsers = function (req, res, next) {
+  User.find({}).exec(function (err, users) {
+    if (err) {
+      return next(err);
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Users retrieved successfully.',
+      data: users
+    });
+  });
+};
+
+module.exports.updateUser = function (req, res, next) {
+  if (!Validations.isObjectId(req.params.userId)) {
+    return res.status(422).json({
+      err: null,
+      msg: 'userId parameter must be a valid ObjectId.',
+      data: null
+    });
+  }
+
+  User.findByIdAndUpdate(
+    req.params.userId,
+    {
+      $set: req.body
+    },
+    { new: true }
+  ).exec(function (err, updatedUser) {
+    if (err) {
+      return next(err);
+    }
+    if (!updatedUser) {
+      return res
+        .status(404)
+        .json({ err: null, msg: 'User not found.', data: null });
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'User was updated successfully.',
+      data: updatedUser
+    });
+  });
+};
 
 
 module.exports.getProduct = function (req, res, next) {

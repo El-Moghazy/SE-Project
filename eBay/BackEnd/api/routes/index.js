@@ -1,9 +1,10 @@
 var express = require('express'),
+  User = require('../models/User.js'),
   router = express.Router(),
   productCtrl = require('../controllers/ProductController'),
   jwt = require('jsonwebtoken'),
-  config = require('../config/Config'),
-  User = require('../models/User.js');
+  config = require('../config/Config');
+
 
 //-------------------------------Product Routes-----------------------------------
 router.get('/product/getProducts', productCtrl.getProducts);
@@ -20,6 +21,10 @@ router.get('/product/getProductsBySellerName/:sellerName', productCtrl.getProduc
 
 
 //-------------------------------User Routes-----------------------------------
+
+router.get('/user/getAllUsers', productCtrl.getAllUsers);
+router.patch('/user/updateUser/:userId', productCtrl.updateUser);
+
 
 //Returns the updated user cart
 router.post('/product/addToCart/:productId', (req, res, next) => {
@@ -182,6 +187,7 @@ router.post('/login', (req, res, next) => {
       // This object is just used to remove the password from the retuned fields
       let returnUser = {
         username: user.username,
+        userType: user.userType,
         id: user._id
       }
 
